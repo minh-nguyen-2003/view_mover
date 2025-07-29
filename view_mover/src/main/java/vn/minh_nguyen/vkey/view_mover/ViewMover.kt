@@ -56,18 +56,21 @@ class ViewMover private constructor(private val viewX: View) {
         }
     }
 
-    // Dừng animation
     fun stop() {
         animator?.cancel()
     }
 
-    // Ẩn view đang di chuyển
-    fun hide() {
-        viewX.visibility = View.GONE
+    fun pause() {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+            animator?.pause()
+        } else {
+            animator?.cancel()
+        }
     }
 
-    // Hiện view đang di chuyển
-    fun show() {
-        viewX.visibility = View.VISIBLE
+    fun resume() {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+            animator?.resume()
+        }
     }
 }
