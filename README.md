@@ -10,7 +10,7 @@ Thêm vào build.gradle (project):
 
 ```
 	dependencyResolutionManagement {
-		repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+		repositoriesMode.set(RepositoriesMode.FAIL-ON-PROJECT-REPOS)
 		repositories {
 			mavenCentral()
 			maven { url = uri("https://jitpack.io") }
@@ -22,7 +22,7 @@ Thêm dependency vào build.gradle (module):
 
 ```
 	dependencies {
-	        implementation("com.github.minh-nguyen-2003:view_mover:1.0.1")
+	        implementation("com.github.minh-nguyen-2003:view-mover:1.0.1")
 	}
 ```
 ## ⚠️ Nhớ thay 1.0.0 bằng tag release phù hợp.
@@ -36,7 +36,7 @@ Thêm dependency vào build.gradle (module):
 
 ## 🏷 Hàm khởi tạo & cài đặt
 | Hàm | Ý nghĩa |
-|_________________________|________________________________________________________________________________|
+|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | move(viewMove: View) | Khởi tạo một ViewMover mới với view cần di chuyển (viewMove). |
 | from(viewA: View) | Chỉ định View xuất phát (nếu không dùng, mặc định xuất phát từ vị trí hiện tại). |
 | to(viewB: View) | Chỉ định View đích (bắt buộc). |
@@ -46,13 +46,13 @@ Thêm dependency vào build.gradle (module):
 
 ## Hàm bắt đầu di chuyển
 | Hàm | Ý nghĩa |
-|_________________|________________________________________________________________________________________|
+|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | start() | Đi từ A đến B.<br>• Nếu viewMove đang nằm trên A → di chuyển từ vị trí hiện tại.<br>• Nếu không nằm trên A → nhảy về A rồi di chuyển đến B.<br>• Nếu không có A → di chuyển từ vị trí hiện tại. |
 | startSmooth() | Luôn di chuyển từ vị trí hiện tại của viewMove đến View B (bỏ qua from()). |
 
 ## Điều khiển animation
 | Hàm | Ý nghĩa |
-|________|_____________________________________________________________________________________|
+|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | pause() | Tạm dừng animation (API ≥ 19). Với Android thấp hơn sẽ tự động cancel(). |
 | resume() | Tiếp tục animation sau khi pause() (API ≥ 19). |
 
@@ -60,19 +60,19 @@ Thêm dependency vào build.gradle (module):
 ViewMover hỗ trợ 9 vị trí neo/gắn:
 
 | Enum | Mô tả |
-||___|
+|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | CENTER | Chính giữa |
 | TOP | Mép trên, giữa |
 | BOTTOM | Mép dưới, giữa |
 | LEFT | Mép trái, giữa |
 | RIGHT | Mép phải, giữa |
-| TOP_LEFT | Góc trên trái |
-| TOP_RIGHT | Góc trên phải |
-| BOTTOM_LEFT | Góc dưới trái |
-| BOTTOM_RIGHT | Góc dưới phải |
+| TOP-LEFT | Góc trên trái |
+| TOP-RIGHT | Góc trên phải |
+| BOTTOM-LEFT | Góc dưới trái |
+| BOTTOM-RIGHT | Góc dưới phải |
 
 ```kotlin
-  .anchor(ViewMover.Point.TOP_LEFT)      // Neo góc trên trái của viewMove
+  .anchor(ViewMover.Point.TOP-LEFT)      // Neo góc trên trái của viewMove
   .attachTo(ViewMover.Point.CENTER)      // Gắn vào tâm của view đích
 ```
 
@@ -83,7 +83,7 @@ ViewMover hỗ trợ 9 vị trí neo/gắn:
           .move(binding.gifView)
           .from(binding.btnA)                      // Bắt đầu từ btnA
           .to(binding.btnB)                        // Kết thúc ở btnB
-          .anchor(ViewMover.Point.TOP_LEFT)        // Neo góc trên trái gifView
+          .anchor(ViewMover.Point.TOP-LEFT)        // Neo góc trên trái gifView
           .attachTo(ViewMover.Point.CENTER)        // Gắn vào tâm của btnB
           .duration(1500)                          // 1.5 giây
           .start()
@@ -97,3 +97,26 @@ ViewMover hỗ trợ 9 vị trí neo/gắn:
   }
 
 ```
+
+## License
+MIT License
+
+Copyright (c) 2025 Nguyễn Đức Minh
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
