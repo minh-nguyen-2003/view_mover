@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "vn.minh_nguyen.vkey.view_mover"
+    namespace = "vn.minh_nguyen.vkey.demo"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "vn.minh_nguyen.vkey.view_mover"
+        applicationId = "vn.minh_nguyen.vkey.demo"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
@@ -45,4 +48,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation("com.airbnb.android:lottie:6.5.2")
+    implementation(project(":view_mover"))
 }

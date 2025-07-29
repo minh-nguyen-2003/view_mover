@@ -1,4 +1,4 @@
-package vn.minh_nguyen.vkey.view_mover
+package vn.minh_nguyen.vkey.demo
 
 import org.junit.Test
 

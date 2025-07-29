@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "view_mover"
 include(":app")
- 
+include(":view_mover")
