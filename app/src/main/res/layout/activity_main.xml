@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <TextView
@@ -12,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="100dp"
+        android:background="@drawable/background_button"
         android:padding="10dp"
         android:text="Button A"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,6 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="100dp"
+        android:background="@drawable/background_button"
         android:padding="10dp"
         android:text="Button B"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,6 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="80dp"
+        android:background="@drawable/background_button"
         android:padding="10dp"
         android:text="Button C"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -40,15 +44,14 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/gifTab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/black"
         android:padding="10dp"
         android:text="Button B"
-        app:layout_constraintBottom_toBottomOf="@+id/btnA"
         app:layout_constraintEnd_toEndOf="@+id/btnA"
         app:layout_constraintStart_toStartOf="@+id/btnA"
         app:layout_constraintTop_toTopOf="@+id/btnA"
         app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/gif_tab" />
+        app:lottie_loop="true" />
 </androidx.constraintlayout.widget.ConstraintLayout>

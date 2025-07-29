@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity() {
                 .move(binding.gifTab)
                 .from(binding.btnB)
                 .to(binding.btnC)
+                .anchor(ViewMover.Point.TOP_LEFT)
+                .attachTo(ViewMover.Point.CENTER)
                 .duration(1500)
                 .start()
         }
