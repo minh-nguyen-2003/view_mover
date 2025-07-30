@@ -6,8 +6,8 @@
 
 ## ▶️ Demo
 
-![View Mover Demo Gif Move](video_gif_move.gif)
-![View Mover Demo Gif Move](video_view_move.gif)
+![View Mover Demo Gif Move](demo_gif_move.gif)
+![View Mover Demo Gif Move](demo_view_move.gif)
 
 ## ⚙️ Cài đặt (qua JitPack)
 
