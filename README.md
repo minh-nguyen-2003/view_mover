@@ -54,7 +54,7 @@ Thêm dependency vào build.gradle (module):
 ## Hàm bắt đầu di chuyển
 | Hàm | Mô tả |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| start() | Đi từ A đến B.<br>• Nếu viewMove đang nằm trên A → di chuyển từ vị trí hiện tại.<br>• Nếu không nằm trên A → nhảy về A rồi di chuyển đến B.<br>• Nếu không có A → di chuyển từ vị trí hiện tại. |
+| start() | Đi từ A đến B.<br>• Nếu viewMove đang nằm trên A -> di chuyển từ vị trí hiện tại.<br>• Nếu không nằm trên A -> nhảy về A rồi di chuyển đến B.<br>• Nếu không có A -> di chuyển từ vị trí hiện tại. |
 | startSmooth() | Luôn di chuyển từ vị trí hiện tại của viewMove đến View B (bỏ qua from()). |
 
 ## Điều khiển animation
@@ -99,7 +99,7 @@ ViewMover hỗ trợ 9 vị trí neo/gắn:
   binding.btnB.setOnClickListener {
       ViewMover
           .move(binding.gifView)
-          .to(binding.btnC)                        // Không có from() → bay từ vị trí hiện tại
+          .to(binding.btnC)                        // Không có from() -> bay từ vị trí hiện tại
           .startSmooth()
   }
 
