@@ -32,3 +32,16 @@ android {
         jvmTarget = "11"
     }
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.github.minh-nguyen-2003"
+                artifactId = "view_mover"
+                version = "1.0.1"
+            }
+        }
+    }
+}
