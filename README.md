@@ -66,13 +66,13 @@ ViewMover hỗ trợ 9 vị trí neo/gắn:
 | BOTTOM | Mép dưới, giữa |
 | LEFT | Mép trái, giữa |
 | RIGHT | Mép phải, giữa |
-| TOP-LEFT | Góc trên trái |
-| TOP-RIGHT | Góc trên phải |
-| BOTTOM-LEFT | Góc dưới trái |
-| BOTTOM-RIGHT | Góc dưới phải |
+| TOP_LEFT | Góc trên trái |
+| TOP_RIGHT | Góc trên phải |
+| BOTTOM_LEFT | Góc dưới trái |
+| BOTTOM_RIGHT | Góc dưới phải |
 
 ```kotlin
-  .anchor(ViewMover.Point.TOP-LEFT)      // Neo góc trên trái của viewMove
+  .anchor(ViewMover.Point.TOP_LEFT)      // Neo góc trên trái của viewMove
   .attachTo(ViewMover.Point.CENTER)      // Gắn vào tâm của view đích
 ```
 
@@ -83,7 +83,7 @@ ViewMover hỗ trợ 9 vị trí neo/gắn:
           .move(binding.gifView)
           .from(binding.btnA)                      // Bắt đầu từ btnA
           .to(binding.btnB)                        // Kết thúc ở btnB
-          .anchor(ViewMover.Point.TOP-LEFT)        // Neo góc trên trái gifView
+          .anchor(ViewMover.Point.TOP_LEFT)        // Neo góc trên trái gifView
           .attachTo(ViewMover.Point.CENTER)        // Gắn vào tâm của btnB
           .duration(1500)                          // 1.5 giây
           .start()
