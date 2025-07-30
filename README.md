@@ -6,8 +6,10 @@
 
 ## ▶️ Demo
 
-![View Mover Demo Gif Move](demo_gif_move.gif)
-![View Mover Demo Gif Move](demo_view_move.gif)
+<p align="center">
+  <img src="demo_gif_move.gif" width="45%" style="margin-right:10px;" />
+  <img src="demo_view_move.gif" width="45%" />
+</p>
 
 ## ⚙️ Cài đặt (qua JitPack)
 
