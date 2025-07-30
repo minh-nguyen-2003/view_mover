@@ -3,7 +3,7 @@
 **ViewMover** giúp bạn dễ dàng **di chuyển một View** (ImageView, Button, GIF, v.v.) **từ một View nguồn (A) sang View đích (B)**, với khả năng tùy chỉnh **điểm neo (anchor)** và **điểm gắn (attach)**.
 
 ---
-
+A lightweight Android library to move views smoothly from point A to point B using animations.
 ## Demo
 
 <p align="center">
