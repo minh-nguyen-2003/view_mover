@@ -42,7 +42,7 @@ Thêm dependency vào build.gradle (module):
 ```
 
 ## Hàm khởi tạo & cài đặt
-| Hàm | Ý nghĩa |
+| Hàm | Mô tả |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | move(viewMove: View) | Khởi tạo một ViewMover mới với view cần di chuyển (viewMove). |
 | from(viewA: View) | Chỉ định View xuất phát (nếu không dùng, mặc định xuất phát từ vị trí hiện tại). |
@@ -52,13 +52,13 @@ Thêm dependency vào build.gradle (module):
 | duration(duration: Long) | Thời gian animation (ms). |
 
 ## Hàm bắt đầu di chuyển
-| Hàm | Ý nghĩa |
+| Hàm | Mô tả |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | start() | Đi từ A đến B.<br>• Nếu viewMove đang nằm trên A → di chuyển từ vị trí hiện tại.<br>• Nếu không nằm trên A → nhảy về A rồi di chuyển đến B.<br>• Nếu không có A → di chuyển từ vị trí hiện tại. |
 | startSmooth() | Luôn di chuyển từ vị trí hiện tại của viewMove đến View B (bỏ qua from()). |
 
 ## Điều khiển animation
-| Hàm | Ý nghĩa |
+| Hàm | Mô tả |
 |----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | pause() | Tạm dừng animation (API ≥ 19). Với Android thấp hơn sẽ tự động cancel(). |
 | resume() | Tiếp tục animation sau khi pause() (API ≥ 19). |
