@@ -53,6 +53,11 @@ class ViewMover private constructor(private val viewMove: View) {
      * @param targetPoint Điểm trên view đích (ví dụ: CENTER, BOTTOM_RIGHT...)
      */
     fun attachTo(targetPoint: Point) = apply { this.targetPoint = targetPoint }
+    /**
+     * Thiết lập thời gian thực hiện animation di chuyển.
+     * @param duration Thời gian animation, tính bằng mili giây (ms).
+     *                 Ví dụ: 1000 nghĩa là hiệu ứng kéo dài 1 giây.
+     */
     fun duration(duration: Long) = apply { this.duration = duration }
 
     /**
