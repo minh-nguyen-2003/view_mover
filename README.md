@@ -4,14 +4,14 @@
 
 ---
 
-## ▶️ Demo
+## Demo
 
 <p align="center">
   <img src="demo_gif_move.gif" width="45%" style="margin-right:10px;" />
   <img src="demo_view_move.gif" width="45%" />
 </p>
 
-## ⚙️ Cài đặt (qua JitPack)
+## Cài đặt (qua JitPack)
 
 Thêm vào build.gradle (project):
 
@@ -32,8 +32,8 @@ Thêm dependency vào build.gradle (module):
 	        implementation("com.github.minh-nguyen-2003:view-mover:1.0.0")
 	}
 ```
-## ⚠️ Nhớ thay 1.0.0 bằng tag release phù hợp.
-## 💡 Cách sử dụng cơ bản
+## Nhớ thay 1.0.0 bằng tag release phù hợp.
+## Cách sử dụng cơ bản
 ```kotlin
   ViewMover
     .move(binding.gifView)
