@@ -57,9 +57,9 @@ class ViewMover private constructor(private val viewMove: View) {
 
     /**
      *  Di chuyển từ A đến B:
-     *  - Nếu viewMove đang nằm trên A → bắt đầu từ vị trí hiện tại của viewMove
-     *  - Nếu viewMove không nằm trên A → nhảy về A rồi mới đi đến B
-     *  - Nếu không chỉ định A → bắt đầu từ vị trí hiện tại của viewMove
+     *  - Nếu viewMove đang nằm trên A -> bắt đầu từ vị trí hiện tại của viewMove
+     *  - Nếu viewMove không nằm trên A -> nhảy về A rồi mới đi đến B
+     *  - Nếu không chỉ định A -> bắt đầu từ vị trí hiện tại của viewMove
      */
     fun start() {
         val endView = viewB ?: return
@@ -69,23 +69,18 @@ class ViewMover private constructor(private val viewMove: View) {
             val startPoint: Pair<Float, Float>
 
             if (viewA != null) {
-                // Kiểm tra xem viewMove có đang đè lên viewA không
                 if (isOverlapping(viewMove, viewA!!)) {
-                    // Đang đè lên viewA → di chuyển từ vị trí hiện tại
                     startPoint = viewMove.x to viewMove.y
                 } else {
-                    // Không đè lên viewA → đặt viewMove về viewA trước khi bay
                     val start = getPosition(viewA!!, targetPoint, selfAnchor)
                     viewMove.x = start.first
                     viewMove.y = start.second
                     startPoint = start
                 }
             } else {
-                // Không có viewA → bay từ vị trí hiện tại
                 startPoint = viewMove.x to viewMove.y
             }
 
-            // Điểm kết thúc
             val endPoint = getPosition(endView, targetPoint, selfAnchor)
             runAnimation(startPoint, endPoint)
         }
