@@ -29,10 +29,10 @@ Thêm dependency vào build.gradle (module):
 
 ```
 	dependencies {
-	        implementation("com.github.minh-nguyen-2003:view_mover:1.0.1")
+	        implementation("com.github.minh-nguyen-2003:view_mover:1.0.0")
 	}
 ```
-## Nhớ thay 1.0.1 bằng tag release mới nhé.
+## Nhớ thay 1.0.0 bằng tag release mới nhé.
 ## Cách sử dụng cơ bản
 ```kotlin
   ViewMover
