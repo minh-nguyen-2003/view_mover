@@ -4,6 +4,11 @@
 
 ---
 
+## ▶️ Demo
+
+![View Mover Demo Gif Move](video_gif_move.gif)
+![View Mover Demo Gif Move](video_view_move.gif)
+
 ## ⚙️ Cài đặt (qua JitPack)
 
 Thêm vào build.gradle (project):
